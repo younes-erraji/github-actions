@@ -1,0 +1,11 @@
+name: First Workflow
+
+on: ["workflow_dispatch", "push"]
+
+jobs:
+  Checkout:
+    name: Lint Code
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3

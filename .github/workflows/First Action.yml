@@ -2,6 +2,7 @@ name: First Workflow
 
 # events: create, fork, issues, issue_comment, watch, discussion, repository_dispatch, schedule, workflow_call...
 # on: workflow_dispatch
+# on: push
 on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
