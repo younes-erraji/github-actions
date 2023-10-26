@@ -1,4 +1,4 @@
-name: First Workflow
+name: Second Workflow
 
 on: ["workflow_dispatch", "push"]
 
@@ -9,3 +9,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup@v3
+        with:
+          node-version: 16
+      - name: Node.js Version
+        run: node -v
+        run: npm -v
