@@ -15,4 +15,3 @@ jobs:
           node-version: 16
       - name: Node.js Version
         run: node -v
-        run: npm -v
