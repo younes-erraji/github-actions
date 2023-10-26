@@ -18,6 +18,7 @@ on:
 
 jobs:
   First-Job:
+    name: First Job
     runs-on: ubuntu-latest
     steps:
       - name: First Step
