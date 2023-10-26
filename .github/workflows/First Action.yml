@@ -16,7 +16,7 @@ on:
     branches: ["main"]
 
 jobs:
-  First Job:
+  First-Job:
     runs-on: ubuntu-latest
     steps:
       - name: First Step
@@ -25,7 +25,7 @@ jobs:
         run: 'echo "First Job: Second Step..."'
       - name: Third Step
         run: 'echo "First Job: Third Step..."'
-  Second Job:
+  Second-Job:
     runs-on: ubuntu-latest
     steps:
       - name: First Step
@@ -34,7 +34,7 @@ jobs:
         run: echo "Second Job => Second Step..."
       - name: Third Step
         run: echo "Second Job => Third Step..."
-  Third Job:
+  Third-Job:
     runs-on: ubuntu-latest
     steps:
       - name: First Step
