@@ -2,8 +2,8 @@ def one():
     print("One")
 
 
-def Two():
-    priint("Two")
+def two():
+    print("Two")
 
 
 print(one())
