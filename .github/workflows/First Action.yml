@@ -19,20 +19,20 @@ jobs:
       #   run: echo "First Job: Second Step..."
       # - name: Third Step
       #   run: echo "First Job: Third Step..."
-  second-job:
-    runs-on: ubuntu-latest
-    steps:
-      - name: First Step
-        run: echo "Second Job: First Step..."
+  # second-job:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: First Step
+  #       run: echo "Second Job: First Step..."
       # - name: Second Step
       #   run: echo "Second Job: Second Step..."
       # - name: Third Step
       #   run: echo "Second Job: Third Step..."
-  third-job:
-    runs-on: ubuntu-latest
-    steps:
-      - name: First Step
-        run: echo "Third Job: First Step..."
+  # third-job:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: First Step
+  #       run: echo "Third Job: First Step..."
       # - name: Second Step
       #   run: echo "Third Job: Second Step..."
       # - name: Third Step
