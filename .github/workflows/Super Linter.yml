@@ -13,7 +13,7 @@ jobs:
       - name: Run Super-Linter
         uses: github/super-linter@v3
         with:
-          node-version: [12.x]
+          node-version: 12.x
         env:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
