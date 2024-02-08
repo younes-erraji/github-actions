@@ -1,4 +1,4 @@
-name: First Workflow
+name: Third Workflow
 
 # events: create, fork, issues, issue_comment, watch, discussion, repository_dispatch, schedule, workflow_call...
 # on: workflow_dispatch
@@ -24,4 +24,4 @@ jobs:
       - name: First Step
         run: 'echo "First Job: First Step..."'
       - name: Third Step
-        run: ./github-shell.sh
+        run: sh ./github-shell.sh
