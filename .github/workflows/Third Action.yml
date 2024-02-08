@@ -33,5 +33,5 @@ jobs:
           ls -a
           df
           echo "Commands: End."
-#      - name: Third Step
-#        run: sh ./github-shell.sh
+      - name: Third Step
+        run: sh ./github-shell.sh
