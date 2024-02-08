@@ -23,5 +23,13 @@ jobs:
     steps:
       - name: First Step
         run: 'echo "First Job: First Step..."'
-      - name: Third Step
-        run: sh ./github-shell.sh
+      - name: Second Step
+        run: |
+          echo "Commands: Start..."
+          whoami
+          env
+          ls -a
+          df
+          echo "Commands: End."
+#      - name: Third Step
+#        run: sh ./github-shell.sh
