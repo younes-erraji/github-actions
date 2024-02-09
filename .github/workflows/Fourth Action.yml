@@ -1,4 +1,4 @@
-name: Fourth Workflow (Windows)
+name: Fourth Workflow (Windows & Mac OS)
 
 # events: create, fork, issues, issue_comment, watch, discussion, repository_dispatch, schedule, workflow_call...
 # on: workflow_dispatch
@@ -16,6 +16,13 @@ jobs:
   windows-job:
     name: Windows Job
     runs-on: windows-latest
+    steps:
+      - name: Checkout...
+        uses: actions/checkout@v2
+
+  mac-job:
+    name: Mac OS Job
+    runs-on: macos-latest
     steps:
       - name: Checkout...
         uses: actions/checkout@v2
