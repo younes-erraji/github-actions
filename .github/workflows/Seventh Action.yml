@@ -32,4 +32,19 @@ jobs:
         if: env.USER == env.SECRET
         run: |
           echo "IF statment (2)"
+
+      - name: Github Action not if Statement (3)...
+        env:
+          USER: ${{ secrets.SECRET_TOKEN }}
+        if: env.USER != 'Younes'
+        run: |
+          echo "Not IF statment (3)"
   
+      - name: Github Action not if Statement (3)...
+        env:
+          USER: Younes
+          SECRET: ${{ secrets.SECRET_TOKEN }}
+        if: env.USER != env.SECRET
+        run: |
+          echo "Not IF statment (3)"
+    
