@@ -1,10 +1,6 @@
-name: First Workflow
+name: Fifth Workflow
 
-# events: create, fork, issues, issue_comment, watch, discussion, repository_dispatch, schedule, workflow_call...
-# on: workflow_dispatch
-# on: push
 on:
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
   push:
     branches:
@@ -17,8 +13,8 @@ on:
     branches: ["main"]
 
 jobs:
-  Python-Job:
-    name: Python Job
+  Python-linux-Job:
+    name: Python Linux Job
     runs-on: ubuntu-latest
     steps:
       - name: Python shell
@@ -26,3 +22,12 @@ jobs:
           import platform
           print(platform.processor())
         shell: python
+  Python-windows-Job:
+    name: Python Job
+    runs-on: windows-latest
+    steps:
+      - name: Powershell
+        run: Get-Location
+      - name: Powershell Bash
+        run: pwd
+        shell: bash
