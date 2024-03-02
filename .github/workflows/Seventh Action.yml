@@ -1,0 +1,19 @@
+name: Seventh Workflow
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  artifact-job:
+    name: Artifact Job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Secret Tokens...
+        run: |
+          echo "Github Action Secret Tokens are Hidden..."
+          echo ${{ secrets.SECRET_TOKEN }}
+          echo "Trick to show Github Action Secret Tokens..."
+          echo ${{ secrets.SECRET_TOKEN }} | sed 's/./& /g'

@@ -1,0 +1,30 @@
+name: Sixth Workflow
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  artifact-job:
+    name: Artifact Job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step 1 - Create Temprorary artifact folder
+        run: |
+          mkdir artifact-folder
+
+      - name: Step 2 - Publish artifacts to the Temprorary artifact folder
+        run: |
+          cd artifact-folder
+          echo 'Alpha' > alpha.html
+          echo 'Bravo' > bravo.html
+          echo 'Charlie' > charlie.html
+          cd ..
+
+      - name: Step 3 - Upload artifact folder
+        uses: actions/upload-artifact@v2
+        with:
+          name: artifact-assets
+          path: artifact-folder
