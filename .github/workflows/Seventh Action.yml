@@ -15,5 +15,21 @@ jobs:
         run: |
           echo "Github Action Secret Tokens are Hidden..."
           echo ${{ secrets.SECRET_TOKEN }}
-          echo "Trick to show Github Action Secret Tokens..."
+          echo "Show Github Action Secret Tokens..."
           echo ${{ secrets.SECRET_TOKEN }} | sed 's/./& /g'
+
+      - name: Github Action if Statement (1)...
+        env:
+          USER: ${{ secrets.SECRET_TOKEN }}
+        if: env.USER == 'Younes'
+        run: |
+          echo "IF statment (1)"
+
+      - name: Github Action if Statement (2)...
+        env:
+          USER: Younes
+          SECRET: ${{ secrets.SECRET_TOKEN }}
+        if: env.USER == env.SECRET
+        run: |
+          echo "IF statment (2)"
+  
