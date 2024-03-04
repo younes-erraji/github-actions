@@ -5,12 +5,21 @@ on:
   push:
     branches:
       - 'main'
+  pull_request:
+    types: [closed, assigned, opened, reopened]
 
 jobs:
   artifact-job:
     name: Artifact Job
     runs-on: ubuntu-latest
     steps:
+      - name: Github...
+        run: |
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_WORKSPACE
+          echo {{ github.token }}
+
       - name: Secret Tokens...
         run: |
           echo "Github Action Secret Tokens are Hidden..."

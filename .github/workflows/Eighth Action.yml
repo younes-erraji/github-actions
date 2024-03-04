@@ -1,0 +1,24 @@
+name: Eighth Workflow
+
+# on: [push]
+on:
+  push:
+#   schedule:
+#     - cron: "* * * * *" # every Minute
+#     - cron: "1 * * * *" # every Hour at 01 Minute
+#     - cron: "5 * * * *" # every Hour at 05 Minutes
+#     - cron: "5 11 * * *" # every day at 11:05
+
+jobs:
+  JS-Job:
+    name: JS Job
+    runs-on: ubuntu-latest
+    steps:
+      - name: JS Step
+        id: js-job
+        uses: actions/hello-world-javascript-action@v1
+        with:
+          who-to-greet: Younes ERRAJI
+
+      - name: Time Step
+        run: echo "${{ steps.js-job.output.time }}"
